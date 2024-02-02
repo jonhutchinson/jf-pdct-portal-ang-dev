@@ -1,0 +1,24 @@
+<div class="j-dialog">
+  <h2 *ngIf="data?.title" class="j-dialog__title">{{ data.title }}</h2>
+  <mat-dialog-content>
+    <form novalidate autocomplete="off" [formGroup]="form" (submit)="submit()">
+      <div class="j-textfield">
+        <div class="j-textfield__label">Email address</div>
+        <mat-form-field appearance="outline" class="j-textfield__field">
+          <input matInput placeholder="Please enter your email" formControlName="email" required />
+          <mat-error *ngIf="form.controls.email.invalid">Please enter a valid email address</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="j-textfield">
+        <div class="j-textfield__label">Additional details</div>
+        <mat-form-field appearance="outline" class="j-textfield__field">
+          <textarea matInput placeholder="Please enter any additional or client/tenant info here…" formControlName="details"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="j-dialog__footer">
+        <button type="submit" class="j-button j-button--secondary">Request access</button>
+        <a class="j-button-view" (click)="cancel()">Cancel</a>
+      </div>
+    </form>
+  </mat-dialog-content>
+</div>

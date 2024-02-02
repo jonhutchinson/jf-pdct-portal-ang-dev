@@ -1,0 +1,61 @@
+steps:
+  - name: '${_DEFAULT_IMAGE}'
+    id: install
+    entrypoint: "npm"
+    args: [ 'install', '--no-emoji' ]
+
+  - name: '${_DEFAULT_IMAGE}'
+    id: lint
+    entrypoint: "npm"
+    args: [ 'run', 'lint' ]
+    waitFor: [ 'install' ]
+
+  - name: '${_DEFAULT_IMAGE}'
+    id: build
+    entrypoint: "npm"
+    args: [ 'run', 'build' ]
+    waitFor: [ 'install' ]
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Build Docker image
+    args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/gcr/${_SERVICE_NAME}:$SHORT_SHA', '.' ]
+    waitFor: [ 'build' ]
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Push Docker image
+    args: [ 'push', 'eu.gcr.io/$PROJECT_ID/gcr/${_SERVICE_NAME}:$SHORT_SHA' ]
+    waitFor: [ 'Build Docker image' ]
+
+  - id: Deploy application on Cloud Run
+    name: 'google/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - alpha
+      - run
+      - deploy
+      - gcr-${_PROJECT_NAME}-${_PROJECT_ENV}-${_CLOUD_RUN_LOCATION_SHORT}-${_SERVICE_NAME}
+      - --timeout=30
+      - --memory=512Mi
+      - --image=eu.gcr.io/$PROJECT_ID/gcr/${_SERVICE_NAME}:$SHORT_SHA
+      - --region=${_CLOUD_RUN_LOCATION}
+      - --platform=managed
+      - --allow-unauthenticated
+      - --tag=t${SHORT_SHA}
+      - --revision-suffix=t${SHORT_SHA}
+      - --port=${_PORT}
+      - --no-use-http2
+      - --execution-environment=gen2
+      - --service-account=${PROJECT_ID}@appspot.gserviceaccount.com
+    waitFor: [ 'Push Docker image' ]
+
+substitutions:
+  _CLOUD_RUN_LOCATION: europe-west1
+  _CLOUD_RUN_LOCATION_SHORT: eu-west1
+  _SERVICE_NAME: "ftd"
+  _PORT: "80"
+  _DEFAULT_IMAGE: node:16
+  _PROJECT_ID: $PROJECT_ID
+options:
+  substitution_option: 'ALLOW_LOOSE'
+  machineType: 'E2_HIGHCPU_32'
+timeout: 1200s

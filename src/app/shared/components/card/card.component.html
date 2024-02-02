@@ -1,0 +1,42 @@
+<div class="card-wrapper" *ngIf="config">
+  <div class="card-top">
+    <div style="margin-top: 90px; padding: 10px;">
+      <span class="j-card__description" *ngIf="config?.description">{{ config.description }}</span>
+    </div>
+  </div>
+  <div class="card-bottom">
+    <div class="j-title j-title--small" *ngIf="config">
+      <i class="j-card__logo bg-{{ type }}" *ngIf="config.title">
+        <img [src]="'assets/images/j_plus.svg'" [width]="16" [height]="12" [alt]="" />
+      </i>
+      <span style="font-size: 14px;">{{ config.title }}</span>
+    </div>
+    <div>
+      <button type="button">Request</button>
+      <button type="button">Login</button>
+    </div>
+  </div>
+</div>
+<!--
+<div class="j-title j-title--small" *ngIf="config">
+  <i class="j-card__logo bg-{{ type }}" *ngIf="config.title">
+    <img [src]="'assets/images/j_plus.svg'" [width]="16" [height]="12" [alt]="" />
+  </i>
+  {{ config.title }}
+</div>
+<p class="j-card__description" *ngIf="config?.description">{{ config.description }}</p>
+<div class="j-card__controls">
+  <a
+    class="j-button j-button--{{ type }}"
+    [class.is-active]="config.accessSend"
+    *ngIf="config?.buttonText"
+    [attr.href]="config.redirect || null"
+    (click)="sendRequest(config.buttonText)"
+  >
+    {{ config.accessSend ? "Requested" : config.buttonText }}
+    <mat-icon class="j-button__icon" *ngIf="config.accessSend">done</mat-icon>
+  </a>
+  <a class="j-button-view" *ngIf="config?.productSlides" [attr.href]="config.productSlides" target="_blank">View one pager</a>
+</div>
+-->
+

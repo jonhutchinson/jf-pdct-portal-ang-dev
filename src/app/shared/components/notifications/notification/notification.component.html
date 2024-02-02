@@ -1,0 +1,20 @@
+<div
+  *ngIf="active"
+  class="oc-notification"
+  [ngClass]="{ 'oc-notification_with-action': notification.action }"
+  [@anim]="'active'"
+  (@anim.done)="destroyElement($event)"
+>
+  <div class="oc-notification__content">
+    <div class="oc-notification__icon">
+      <mat-icon *ngIf="notification.type === 'success'" class="oc-notification__icon-success">check_circle_outline</mat-icon>
+      <mat-icon *ngIf="notification.type === 'error'" class="oc-notification__icon-error">highlight_off</mat-icon>
+    </div>
+    <div class="oc-notification__message">
+      <span>{{ notification.message }}</span>
+      <a *ngIf="notification.action" class="oc-notification__link" (click)="action.emit(notification); close()">{{
+        notification.action.name
+      }}</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.j-card {
+  display: block;
+  position: relative;
+  width: 310px;
+  min-width: 310px;
+  height: 274px;
+  background: transparent;
+  border: 1px solid red;
+  @media (min-width: 576px) {
+    width: 342px;
+    min-width: 342px;
+  }
+}
+
+.card-top {
+  // background-color: #4022c8;
+  background-image: url('../../../../../src/assets/images/filler-image.png');
+  border-radius: 8px 8px 0 0;
+  border: 3px solid #4022c8;
+}
+
+.card-bottom {
+  align-items: center;
+  background-color: #3b30a2;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.j-card__logo {
+  margin-right: 4px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.j-card__logo--accent {
+  background: $accent;
+}
+
+.j-card__description {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.j-card__controls {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+
+  @media (min-width: 576px) {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .j-button {
+    margin-right: 24px;
+  }
+}
+
+.j-button {
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 101px;
+  line-height: 34px;
+  padding: 0 16px;
+  border-radius: 30px;
+  overflow: visible;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  border: 3px solid transparent;
+}
+
+.j-button--secondary {
+  @include button-bg($secondary);
+}
+
+.j-button--accent {
+  @include button-bg($accent);
+}
+
+.j-button--primary {
+  @include button-bg($primary);
+}
+
+.j-button--warn {
+  @include button-bg($warn);
+}
+
+.j-button__icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}

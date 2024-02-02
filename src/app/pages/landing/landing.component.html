@@ -1,0 +1,23 @@
+<div class="j-header">
+  <div class="j-logo-wrapper-test">
+    <img class="j-logo" [src]="'assets/images/logo.svg'" [alt]="'J+'" />
+  </div>
+  <h1>App Store</h1>
+</div>
+<div class="j-container">
+<!--
+  <div class="j-sub-header">
+    <div class="j-logo-wrapper">
+      <img class="j-logo" [src]="'assets/images/logo.svg'" [alt]="'J+'" />
+    </div>
+    <h1 class="j-description">App Store</h1>
+  </div>
+-->
+  <section class="j-products" *ngFor="let product of productList; let index = index">
+    <div class="j-title text-{{ product.type }}">{{ product.title }}</div>
+    <p class="j-products__description">{{ product.description }}</p>
+    <div class="j-products__list">
+      <j-card *ngFor="let item of product.products" [type]="product.type" [config]="item" (request)="openDialog($event, index)"> </j-card>
+    </div>
+  </section>
+</div>

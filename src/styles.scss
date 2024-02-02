@@ -1,0 +1,84 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$jellyfish-primary: mat.define-palette(mat.$indigo-palette);
+$jellyfish-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$jellyfish-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$jellyfish-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $jellyfish-primary,
+      accent: $jellyfish-accent,
+      warn: $jellyfish-warn
+    )
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($jellyfish-theme);
+
+@import "src/app/scss/variables";
+@import "app/scss/styles";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: #000;
+  background: $background-color;
+}
+.cdk-dialog-container {
+  outline: none !important;
+  border: none !important;
+}
+
+.mat-snack-bar-container {
+  background-color: green;
+
+  &.mat-snack-bar-container_pure-snackbar {
+    min-height: unset;
+    max-width: unset;
+    padding: 0;
+    margin: 0;
+    word-break: break-word;
+    background-color: transparent;
+    min-width: 600px;
+    box-shadow: none;
+  }
+
+  .mat-simple-snackbar {
+    color: #fff;
+    justify-content: center;
+  }
+
+  &.success {
+    background-color: #02883e;
+  }
+}
+
+.mat-dialog-container {
+  padding: 32px !important;
+  border-radius: 20px !important;
+}

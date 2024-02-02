@@ -1,0 +1,11 @@
+$background-color: #f6f5f7 !default;
+// $primary: #523ff6 !default;
+$primary: #523ff6 !default;
+// #4032c8, #3b30a2
+$secondary: #0069df !default;
+// $accent: #da0034 !default;
+$accent: #da0034 !default;
+$warn: #03837b !default;
+$text-color: #000 !default;
+$card-background-color: #fff !default;
+$border-color: lighten($text-color, 84%);
