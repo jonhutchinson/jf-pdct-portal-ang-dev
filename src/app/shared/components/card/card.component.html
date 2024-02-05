@@ -1,6 +1,7 @@
-<div class="card-wrapper" *ngIf="config">
+<div class="card-wrapper-{{ type }}" *ngIf="config">
   <div class="card-top">
-    <div style="margin-top: 90px; padding: 10px;">
+    <div class="beta">BETA</div>
+    <div class="content">
       <span class="j-card__description" *ngIf="config?.description">{{ config.description }}</span>
     </div>
   </div>
@@ -9,10 +10,10 @@
       <i class="j-card__logo bg-{{ type }}" *ngIf="config.title">
         <img [src]="'assets/images/j_plus.svg'" [width]="16" [height]="12" [alt]="" />
       </i>
-      <span style="font-size: 14px;">{{ config.title }}</span>
+      <span style="font-size: 14px">{{ config.title }}</span>
     </div>
     <div>
-      <button type="button">Request</button>
+      <button type="button" (click)="sendRequest('Request access')" *ngIf="config.isRequest">Request</button>
       <button type="button">Login</button>
     </div>
   </div>
@@ -39,4 +40,3 @@
   <a class="j-button-view" *ngIf="config?.productSlides" [attr.href]="config.productSlides" target="_blank">View one pager</a>
 </div>
 -->
-

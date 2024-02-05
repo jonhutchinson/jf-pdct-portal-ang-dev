@@ -6,33 +6,156 @@
   position: relative;
   width: 310px;
   min-width: 310px;
-  height: 274px;
-  background: transparent;
-  border: 1px solid red;
   @media (min-width: 576px) {
     width: 342px;
     min-width: 342px;
   }
 }
 
+.card-wrapper-primary,
+.card-wrapper-secondary,
+.card-wrapper-accent,
+.card-wrapper-warn {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.card-wrapper- {
+  &primary {
+    .card-top {
+      background-image: url("../../../../../src/assets/images/filler-image.png");
+      border-color: $primary-2;
+
+      .beta {
+        background-color: $primary-2;
+      }
+
+      .content {
+        background-color: $primary-2;
+        box-shadow: 0 0 20px 20px $primary-2;
+      }
+    }
+
+    .card-bottom {
+      background-color: $primary-3;
+    }
+  }
+
+  &secondary {
+    .card-top {
+      background-image: url("../../../../../src/assets/images/filler-image.png");
+      border-color: $secondary-2;
+
+      .beta {
+        background-color: $secondary-2;
+      }
+
+      .content {
+        background-color: $secondary-2;
+        box-shadow: 0 0 20px 20px $secondary-2;
+      }
+    }
+
+    .card-bottom {
+      background-color: $secondary-3;
+    }
+  }
+
+  &accent {
+    .card-top {
+      background-image: url("../../../../../src/assets/images/filler-image.png");
+      border-color: $accent-2;
+
+      .beta {
+        background-color: $accent-2;
+      }
+
+      .content {
+        background-color: $accent-2;
+        box-shadow: 0 0 20px 20px $accent-2;
+      }
+    }
+
+    .card-bottom {
+      background-color: $accent-3;
+    }
+  }
+
+  &warn {
+    .card-top {
+      background-image: url("../../../../../src/assets/images/filler-image.png");
+      border-color: $warn-2;
+
+      .beta {
+        background-color: $warn-2;
+      }
+
+      .content {
+        background-color: $warn-2;
+        box-shadow: 0 0 20px 20px $warn-2;
+      }
+    }
+
+    .card-bottom {
+      background-color: $warn-3;
+    }
+  }
+}
+
 .card-top {
-  // background-color: #4022c8;
-  background-image: url('../../../../../src/assets/images/filler-image.png');
-  border-radius: 8px 8px 0 0;
-  border: 3px solid #4022c8;
+  background-size: cover;
+  border-radius: 16px 16px 0 0;
+  border-style: solid;
+  border-width: 3px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .beta {
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+    display: inline-block;
+    font-size: 11px;
+    margin: 0 auto;
+    padding: 1px 8px 2px 8px;
+  }
+
+  .content {
+    padding: 10px;
+  }
 }
 
 .card-bottom {
   align-items: center;
-  background-color: #3b30a2;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 16px 16px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 16px;
+
+  button {
+    background-color: rgba(#fff, 0.3);
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 6px 10px;
+
+    &:first-of-type {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      background-color: rgba(#fff, 0.6);
+    }
+  }
 }
 
 .j-card__logo {
-  margin-right: 4px;
+  margin-right: 8px;
   display: inline-block;
   width: 32px;
   height: 32px;

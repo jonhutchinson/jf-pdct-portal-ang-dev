@@ -15,7 +15,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         productSlides:
           'https://docs.google.com/presentation/d/109TXmMz7XuJgVeXn_tYRUYeUZvR88NYL/edit?usp=sharing&ouid=108377238227713570661&rtpof=true&sd=true',
         accessSend: false,
-        role: 'ROLE_MEDIA_SEARCH'
+        role: 'ROLE_MEDIA_SEARCH',
+        isRequest: false
       },
       {
         id: 'monitor',
@@ -25,7 +26,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: 'https://docs.google.com/presentation/d/1eRWdcqX3C3PgdCfpfo-5oEIaZBbU5XPHwV3VWHK8i2s/edit?usp=sharing',
         accessSend: false,
-        role: 'ROLE_MEDIA_MONITOR'
+        role: 'ROLE_MEDIA_MONITOR',
+        isRequest: false
       },
       {
         id: 'automate',
@@ -35,7 +37,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: '',
         accessSend: false,
-        role: 'ROLE_MEDIA_AUTOMATE'
+        role: 'ROLE_MEDIA_AUTOMATE',
+        isRequest: false
       },
       {
         id: 'bidding',
@@ -45,7 +48,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: 'https://docs.google.com/presentation/d/1j1tX4vyc0Dte2q6hwLMpDqEakYaO5xd-uV3xzLo6zSM/edit?usp=sharing',
         accessSend: false,
-        role: 'ROLE_MEDIA_BIDDING'
+        role: 'ROLE_MEDIA_BIDDING',
+        isRequest: false
       }
     ]
   },
@@ -62,7 +66,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: 'https://docs.google.com/presentation/d/1wTZeXvkQcPI0C6vTCRboIp7nLX-nNbSMIhxdNv7O0DM/edit?usp=sharing',
         accessSend: false,
-        role: 'ROLE_CREATIVE_COMMUNITY'
+        role: 'ROLE_CREATIVE_COMMUNITY',
+        isRequest: true
       },
       {
         id: 'workflow',
@@ -74,7 +79,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         productSlides:
           'https://docs.google.com/presentation/d/1SHJ46IsGOmv0SLLVKifT36FMFk0R0R43/edit?usp=sharing&ouid=108377238227713570661&rtpof=true&sd=true',
         accessSend: false,
-        role: 'ROLE_CREATIVE_WORKFLOW'
+        role: 'ROLE_CREATIVE_WORKFLOW',
+        isRequest: true
       },
       {
         id: 'scribe',
@@ -84,7 +90,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: 'https://docs.google.com/presentation/d/1bGN1wSGd0ngV0Fd9gymxy9YpMbC7YCiE8aYnZARahKg/edit?usp=sharing',
         accessSend: false,
-        role: 'ROLE_CREATIVE_SCRIBE'
+        role: 'ROLE_CREATIVE_SCRIBE',
+        isRequest: true
       },
       {
         id: 'display',
@@ -94,7 +101,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: 'https://docs.google.com/presentation/d/1gBtOc_U2KgtDQQ0_EiTKx9xvzGa1P5PRWRL7QHYCJzE/edit?usp=sharing',
         accessSend: false,
-        role: 'ROLE_CREATIVE_DISPLAY'
+        role: 'ROLE_CREATIVE_DISPLAY',
+        isRequest: true
       }
     ]
   },
@@ -112,7 +120,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         productSlides:
           'https://docs.google.com/presentation/d/1XnoHVt9lq1eJSrwMT9twr1bgqAKJW4fg/edit?usp=sharing&ouid=108377238227713570661&rtpof=true&sd=true',
         accessSend: false,
-        role: 'ROLE_DATA_DATAPREP'
+        role: 'ROLE_DATA_DATAPREP',
+        isRequest: true
       },
       {
         id: 'dataviz',
@@ -123,7 +132,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         productSlides:
           'https://docs.google.com/presentation/d/1XnoHVt9lq1eJSrwMT9twr1bgqAKJW4fg/edit?usp=sharing&ouid=108377238227713570661&rtpof=true&sd=true',
         accessSend: false,
-        role: 'ROLE_DATA_DATAVIZ'
+        role: 'ROLE_DATA_DATAVIZ',
+        isRequest: true
       },
       {
         id: 'iq',
@@ -133,7 +143,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: '',
         accessSend: false,
-        role: 'ROLE_DATA_IQ'
+        role: 'ROLE_DATA_IQ',
+        isRequest: true
       },
       {
         id: 'track',
@@ -143,7 +154,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: 'https://docs.google.com/presentation/d/1fnwUohQVIVAhNmhmdxfWuBTW5PjFZT04UsHEr2GCR-I/edit?usp=sharing',
         accessSend: false,
-        role: 'ROLE_DATA_TRACK'
+        role: 'ROLE_DATA_TRACK',
+        isRequest: true
       }
     ]
   },
@@ -161,7 +173,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         productSlides:
           'https://docs.google.com/presentation/d/1iJS60akY2Ncg_FOTAvDmKldfnc0S85hR/edit?usp=sharing&ouid=108377238227713570661&rtpof=true&sd=true',
         accessSend: false,
-        role: 'ROLE_COMMERCE_RETAIL_ANALYTICS'
+        role: 'ROLE_COMMERCE_RETAIL_ANALYTICS',
+        isRequest: true
       },
       {
         id: 'retail_media',
@@ -170,7 +183,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: '',
         accessSend: false,
-        role: 'ROLE_COMMERCE_RETAIL_MEDIA'
+        role: 'ROLE_COMMERCE_RETAIL_MEDIA',
+        isRequest: true
       },
       {
         id: 'shopping',
@@ -180,7 +194,8 @@ export const PRODUCT_LIST: ProductDataModel[] = [
         buttonText: 'Request access',
         productSlides: '',
         accessSend: false,
-        role: 'ROLE_COMMERCE_SHOPPING'
+        role: 'ROLE_COMMERCE_SHOPPING',
+        isRequest: true
       }
     ]
   }

@@ -1,11 +1,21 @@
 $background-color: #f6f5f7 !default;
-// $primary: #523ff6 !default;
+
 $primary: #523ff6 !default;
-// #4032c8, #3b30a2
+$primary-2: #4032c8;
+$primary-3: #3b30a2;
+
 $secondary: #0069df !default;
-// $accent: #da0034 !default;
+$secondary-2: #0254b1;
+$secondary-3: #00358c;
+
 $accent: #da0034 !default;
+$accent-2: #c80433;
+$accent-3: #910c2c;
+
 $warn: #03837b !default;
+$warn-2: #43625c;
+$warn-3: #074d49;
+
 $text-color: #000 !default;
 $card-background-color: #fff !default;
 $border-color: lighten($text-color, 84%);

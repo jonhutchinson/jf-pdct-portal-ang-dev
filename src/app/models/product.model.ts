@@ -17,4 +17,5 @@ export interface ProductListModel extends ProductModel {
   productSlides: string;
   buttonText: string;
   accessSend: boolean;
+  isRequest: boolean;
 }
