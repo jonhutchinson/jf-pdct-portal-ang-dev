@@ -33,7 +33,7 @@
 
       .content {
         background-color: $primary-2;
-        box-shadow: 0 0 20px 20px $primary-2;
+        box-shadow: 0 0 20px 23px $primary-2;
       }
     }
 
@@ -53,7 +53,7 @@
 
       .content {
         background-color: $secondary-2;
-        box-shadow: 0 0 20px 20px $secondary-2;
+        box-shadow: 0 0 20px 23px $secondary-2;
       }
     }
 
@@ -73,7 +73,7 @@
 
       .content {
         background-color: $accent-2;
-        box-shadow: 0 0 20px 20px $accent-2;
+        box-shadow: 0 0 20px 23px $accent-2;
       }
     }
 
@@ -93,7 +93,7 @@
 
       .content {
         background-color: $warn-2;
-        box-shadow: 0 0 20px 20px $warn-2;
+        box-shadow: 0 0 20px 23px $warn-2;
       }
     }
 
@@ -124,7 +124,14 @@
   }
 
   .content {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: #fff;
+    height: 49px;
+    -webkit-line-clamp: 2;
+    margin-bottom: 5px;
     padding: 10px;
+    overflow: hidden;
   }
 }
 
