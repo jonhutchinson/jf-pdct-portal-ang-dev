@@ -18,4 +18,6 @@ export interface ProductListModel extends ProductModel {
   buttonText: string;
   accessSend: boolean;
   isRequest: boolean;
+  isBeta: boolean;
+  image: string;
 }

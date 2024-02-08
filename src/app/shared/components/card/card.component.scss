@@ -24,7 +24,6 @@
 .card-wrapper- {
   &primary {
     .card-top {
-      background-image: url("../../../../../src/assets/images/filler-image.png");
       border-color: $primary-2;
 
       .beta {
@@ -44,7 +43,6 @@
 
   &secondary {
     .card-top {
-      background-image: url("../../../../../src/assets/images/filler-image.png");
       border-color: $secondary-2;
 
       .beta {
@@ -64,7 +62,6 @@
 
   &accent {
     .card-top {
-      background-image: url("../../../../../src/assets/images/filler-image.png");
       border-color: $accent-2;
 
       .beta {
@@ -84,7 +81,6 @@
 
   &warn {
     .card-top {
-      background-image: url("../../../../../src/assets/images/filler-image.png");
       border-color: $warn-2;
 
       .beta {
@@ -114,13 +110,16 @@
   justify-content: space-between;
   overflow: hidden;
 
-  .beta {
+  .beta-container {
     color: #fff;
-    border-radius: 0 0 8px 8px;
     display: inline-block;
     font-size: 11px;
     margin: 0 auto;
-    padding: 1px 8px 2px 8px;
+
+    .beta {
+      border-radius: 0 0 8px 8px;
+      padding: 1px 8px 2px 8px;
+    }
   }
 
   .content {

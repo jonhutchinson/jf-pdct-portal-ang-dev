@@ -1,6 +1,8 @@
 <div class="card-wrapper-{{ type }}" *ngIf="config">
-  <div class="card-top">
-    <div class="beta">BETA</div>
+  <div class="card-top" style="background-image: url('{{ config.image }}');">
+    <div class="beta-container">
+      <div class="beta" *ngIf="config.isBeta">BETA</div>
+    </div>
     <div class="content">
       <span class="j-card__description" *ngIf="config?.description">{{ config.description }}</span>
     </div>
